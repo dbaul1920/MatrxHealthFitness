@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | MATRX Health & Fitness</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <span class="top-bar__location">Macomb, MI 48042</span>
+      <a href="tel:5862323644">(586) 232-3644</a>
+      <a href="new-patients.html">New Patients</a>
+      <a href="physician-referrals.html">Refer a Patient</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="logo" aria-label="MATRX Health & Fitness Home">
+        <img src="images/matrx logo.webp" alt="MATRX Health & Fitness" class="logo__img">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="mainNav">
+        <ul class="main-nav__list">
+          <li class="has-dropdown">
+            <a href="neurological-rehabilitation.html">Physical Therapy <svg class="chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+            <ul class="dropdown">
+              <li><a href="neurological-rehabilitation.html">Neurological Rehabilitation</a></li>
+              <li><a href="orthopedics.html">Orthopedics & Pain Management</a></li>
+              <li><a href="wheelchair-seating.html">Wheelchair Seating & Positioning</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="fitness-programs.html" class="active">Fitness & Strength <svg class="chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
+            <ul class="dropdown">
+              <li><a href="fitness-programs.html">Programs & Pricing</a></li>
+              <li><a href="personal-training.html">Personal Training</a></li>
+              <li><a href="adaptive-sports.html">Adaptive Sports & Group Classes</a></li>
+            </ul>
+          </li>
+          <li><a href="physician-referrals.html">For Physicians</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+      <a href="checkout.html" class="btn btn--cta header-cta">Cart (1)</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- CHECKOUT HEADER -->
+  <section class="checkout-header">
+    <div class="container">
+      <h1>Checkout</h1>
+      <div class="checkout-steps">
+        <span class="checkout-step checkout-step--active">1. Cart</span>
+        <span class="checkout-step">2. Information</span>
+        <span class="checkout-step">3. Payment</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKOUT CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="checkout-layout">
+        <div class="checkout-layout__main">
+
+          <!-- CART ITEMS -->
+          <div class="checkout-section">
+            <h2>Your Cart</h2>
+            <div class="cart-items">
+              <div class="cart-item">
+                <div class="cart-item__info">
+                  <h3 class="cart-item__title">6-Week Transformation Cycle</h3>
+                  <p class="cart-item__meta">2x Per Week &bull; Starts Feb 11, 2025</p>
+                  <p class="cart-item__sessions">12 sessions total</p>
+                </div>
+                <div class="cart-item__price">$540.00</div>
+                <button class="cart-item__remove" aria-label="Remove item">&times;</button>
+              </div>
+            </div>
+            <a href="book-class.html" class="btn btn--outline-dark btn--sm">+ Add Another Class</a>
+          </div>
+
+          <!-- CONTACT INFORMATION -->
+          <div class="checkout-section">
+            <h2>Contact Information</h2>
+            <form class="checkout-form" action="confirmation.html" method="get">
+              <div class="form-row">
+                <div class="form-group form-group--half">
+                  <label for="first-name">First Name *</label>
+                  <input type="text" id="first-name" name="first_name" required>
+                </div>
+                <div class="form-group form-group--half">
+                  <label for="last-name">Last Name *</label>
+                  <input type="text" id="last-name" name="last_name" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group form-group--half">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group form-group--half">
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+              </div>
+
+              <h3 style="margin-top:2rem;margin-bottom:1rem;font-size:1rem;">Emergency Contact</h3>
+              <div class="form-row">
+                <div class="form-group form-group--half">
+                  <label for="emergency-name">Emergency Contact Name</label>
+                  <input type="text" id="emergency-name" name="emergency_name">
+                </div>
+                <div class="form-group form-group--half">
+                  <label for="emergency-phone">Emergency Contact Phone</label>
+                  <input type="tel" id="emergency-phone" name="emergency_phone">
+                </div>
+              </div>
+
+              <!-- WAIVER -->
+              <div class="checkout-section checkout-section--waiver">
+                <h2>Liability Waiver</h2>
+                <div class="waiver-box">
+                  <p>By checking this box, I acknowledge that I have read and agree to the <a href="#" target="_blank">MATRX Health & Fitness Liability Waiver and Terms of Service</a>. I understand that physical activity involves inherent risks, and I am participating voluntarily.</p>
+                </div>
+                <label class="checkbox-label">
+                  <input type="checkbox" name="waiver" required>
+                  <span>I agree to the Liability Waiver and Terms of Service *</span>
+                </label>
+              </div>
+
+              <!-- PAYMENT -->
+              <div class="checkout-section">
+                <h2>Payment</h2>
+                <div class="payment-methods">
+                  <label class="payment-method payment-method--active">
+                    <input type="radio" name="payment" value="card" checked>
+                    <span class="payment-method__content">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                      Credit / Debit Card
+                    </span>
+                  </label>
+                  <label class="payment-method">
+                    <input type="radio" name="payment" value="applepay">
+                    <span class="payment-method__content">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                      Apple Pay
+                    </span>
+                  </label>
+                </div>
+
+                <div class="card-fields">
+                  <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card_number" placeholder="1234 5678 9012 3456">
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group form-group--half">
+                      <label for="card-expiry">Expiration</label>
+                      <input type="text" id="card-expiry" name="card_expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group form-group--half">
+                      <label for="card-cvc">CVC</label>
+                      <input type="text" id="card-cvc" name="card_cvc" placeholder="123">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn--cta btn--lg checkout-submit">Complete Purchase</button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- ORDER SUMMARY SIDEBAR -->
+        <div class="checkout-layout__sidebar">
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="order-summary__items">
+              <div class="order-summary__item">
+                <span>6-Week Transformation (2x/week)</span>
+                <span>$540.00</span>
+              </div>
+            </div>
+            <div class="order-summary__divider"></div>
+            <div class="order-summary__row">
+              <span>Subtotal</span>
+              <span>$540.00</span>
+            </div>
+            <div class="order-summary__row order-summary__row--total">
+              <span>Total</span>
+              <span>$540.00</span>
+            </div>
+            <div class="order-summary__note">
+              <p>Your card will be charged $540.00</p>
+            </div>
+          </div>
+
+          <div class="checkout-trust">
+            <div class="checkout-trust__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>Secure checkout</span>
+            </div>
+            <div class="checkout-trust__item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>48-hour cancellation policy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="container site-footer__grid">
+        <div class="footer-col footer-col--brand">
+          <img src="images/matrx logo.webp" alt="MATRX Health & Fitness" class="logo__img logo__img--footer">
+          <p class="footer-tagline">Restoring function, empowering life.</p>
+          <p class="footer-address">16145 Leone Dr<br>Macomb, MI 48042<br><a href="tel:5862323644">(586) 232-3644</a></p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/MatrXHealthFitness/" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/matrxhealth.fitness" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="neurological-rehabilitation.html">Physical Therapy</a>
+          <a href="fitness-programs.html">Fitness & Strength</a>
+          <a href="neufit.html">NeuFit Technology</a>
+          <a href="physician-referrals.html">For Physicians</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="new-patients.html">New Patients</a>
+          <a href="conditions.html">Conditions We Treat</a>
+          <a href="events.html">Events & Community</a>
+          <a href="about-us.html">About Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email-checkout" class="sr-only">Email</label>
+            <input type="email" id="newsletter-email-checkout" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn--cta btn--sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>&copy; 2025 MATRX Health & Fitness</span>
+        <div class="footer-bottom__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

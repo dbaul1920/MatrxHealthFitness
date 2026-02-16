@@ -666,3 +666,189 @@ select{width:100%;padding:.65rem .75rem;border:1px solid var(--border);border-ra
 .confirmation-contact{text-align:center;max-width:600px;margin:0 auto}
 .confirmation-contact h3{font-size:1rem;margin-bottom:.5rem}
 .confirmation-contact p{font-size:.9rem;color:var(--slate)}
+
+/* ============================================================
+   PARTNER LOGO ROTATOR (Homepage & About Us)
+   CSS-only infinite auto-scroll
+   ============================================================ */
+.logo-rotator__track-wrap{
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image:linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.logo-rotator__track{
+  display:flex;
+  gap:2rem;
+  width:max-content;
+  animation:logo-scroll 30s linear infinite;
+}
+.logo-rotator__item{
+  flex-shrink:0;
+  width:200px;
+  height:80px;
+  background:var(--light-gray);
+  border:1px solid var(--border);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--silver-text);
+  font-size:.75rem;
+}
+.logo-rotator__item img{
+  max-width:160px;
+  max-height:60px;
+  object-fit:contain;
+  filter:grayscale(100%);
+  opacity:.7;
+  transition:all .3s;
+}
+.logo-rotator__item:hover img{
+  filter:grayscale(0%);
+  opacity:1;
+}
+@keyframes logo-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* ============================================================
+   DPT CALLOUT BANNER (Orthopedics, etc.)
+   ============================================================ */
+.dpt-callout{
+  background:var(--light-gray);
+  border-left:4px solid var(--matrx-green);
+  border-radius:0 8px 8px 0;
+  padding:1.25rem 1.75rem;
+  font-size:.95rem;
+  line-height:1.7;
+  color:var(--charcoal);
+}
+.dpt-callout strong{
+  color:var(--charcoal);
+}
+
+/* ============================================================
+   VIDEO TESTIMONIALS (Homepage)
+   ============================================================ */
+.testimonials__grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:2rem;
+  margin-top:1.5rem;
+}
+.testimonial-card{
+  background:var(--white);
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  transition:transform .2s, box-shadow .2s;
+}
+.testimonial-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+.testimonial-card__name{
+  font-size:1rem;
+  padding:1rem 1.25rem .25rem;
+}
+.testimonial-card__quote{
+  font-size:.875rem;
+  color:var(--slate);
+  padding:0 1.25rem 1.25rem;
+  line-height:1.6;
+}
+
+/* Video embed container (16:9 placeholder) */
+.video-embed{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  background:var(--charcoal);
+  overflow:hidden;
+}
+.video-embed iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
+.video-embed__placeholder{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.75rem;
+  color:rgba(255,255,255,.5);
+  font-size:.85rem;
+  font-weight:600;
+}
+.video-embed__placeholder svg{
+  opacity:.4;
+}
+
+@media(max-width:992px){
+  .testimonials__grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .testimonials__grid{grid-template-columns:1fr}
+}
+
+/* ============================================================
+   FORM CONFIRMATION (Referral form success state)
+   ============================================================ */
+.form-confirmation{
+  background:var(--light-gray);
+  border:1px solid var(--matrx-green);
+  border-radius:8px;
+  padding:2rem;
+  margin-top:1rem;
+}
+.form-confirmation h3{
+  color:var(--matrx-green-dark);
+  margin-bottom:.5rem;
+}
+.form-confirmation p{
+  font-size:.9rem;
+  color:var(--slate);
+  max-width:420px;
+  margin:0 auto;
+}
+
+/* ============================================================
+   COMMUNITY MOSAIC (Homepage — Our Community in Action)
+   ============================================================ */
+.community-mosaic{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-auto-rows:220px;
+  gap:1rem;
+  margin-top:1.5rem;
+}
+.community-mosaic__item{
+  border-radius:8px;
+  overflow:hidden;
+}
+.community-mosaic__item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+.community-mosaic__item:hover img{
+  transform:scale(1.04);
+}
+.community-mosaic__item--wide{
+  grid-column:span 2;
+}
+@media(max-width:768px){
+  .community-mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:180px}
+  .community-mosaic__item--wide{grid-column:span 2}
+}
+@media(max-width:480px){
+  .community-mosaic{grid-template-columns:1fr;grid-auto-rows:200px}
+  .community-mosaic__item--wide{grid-column:span 1}
+}

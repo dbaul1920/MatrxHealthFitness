@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book a Class | MATRX Health & Fitness</title>
+  <title>Book Adaptive Group Fitness | MATRX Health & Fitness</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -43,9 +43,7 @@
           <li class="has-dropdown">
             <a href="fitness-programs.html" class="active">Fitness & Strength <svg class="chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
             <ul class="dropdown">
-              <li><a href="fitness-programs.html">Programs & Pricing</a></li>
-              <li><a href="personal-training.html">Personal Training</a></li>
-              <li><a href="adaptive-sports.html">Adaptive Sports & Group Classes</a></li>
+              <li><a href="fitness-programs.html">Fitness & Strength</a></li>
             </ul>
           </li>
           <li><a href="physician-referrals.html">For Physicians</a></li>
@@ -65,26 +63,26 @@
     </div>
   </div>
 
-  <!-- CLASS DETAIL -->
+  <!-- ADAPTIVE GROUP FITNESS -->
   <section class="section">
     <div class="container">
       <div class="booking-layout">
         <div class="booking-layout__main">
-          <h1 class="booking-title">6-Week Transformation Cycle</h1>
-          <p class="booking-subtitle">HIIT & Strength Training powered by NeuFit</p>
+          <h1 class="booking-title">Adaptive Group Fitness</h1>
+          <p class="booking-subtitle">Inclusive group training powered by the Neubie</p>
 
           <div class="booking-details">
             <div class="booking-detail">
-              <span class="booking-detail__label">Duration</span>
-              <span class="booking-detail__value">6 weeks (12 sessions)</span>
-            </div>
-            <div class="booking-detail">
               <span class="booking-detail__label">Schedule</span>
-              <span class="booking-detail__value">Tuesdays & Thursdays @ 4:00 PM</span>
+              <span class="booking-detail__value">Fridays, 11:00 AM &ndash; 12:00 PM</span>
             </div>
             <div class="booking-detail">
-              <span class="booking-detail__label">Class Size</span>
-              <span class="booking-detail__value">Max 8 participants</span>
+              <span class="booking-detail__label">Session Length</span>
+              <span class="booking-detail__value">1 hour</span>
+            </div>
+            <div class="booking-detail">
+              <span class="booking-detail__label">Format</span>
+              <span class="booking-detail__value">Small group class</span>
             </div>
             <div class="booking-detail">
               <span class="booking-detail__label">Location</span>
@@ -95,17 +93,22 @@
           <div class="booking-description">
             <h2>What's Included</h2>
             <ul class="check-list">
-              <li>12 structured 1-hour HIIT & Strength sessions</li>
-              <li>NeuFit neurostimulation technology during training</li>
-              <li>Nutrition tips and weekly accountability check-ins</li>
-              <li>Private Facebook group for community support</li>
-              <li>Progress tracking and body composition assessment</li>
+              <li>Structured 1-hour adaptive strength and conditioning class</li>
+              <li>Neubie neurostimulation technology during training</li>
+              <li>Modifications for all mobility levels and abilities</li>
+              <li>Expert coaching from certified adaptive fitness trainers</li>
+              <li>Supportive community environment</li>
             </ul>
           </div>
 
           <div class="booking-description">
             <h2>Who It's For</h2>
-            <p>This program is designed for all fitness levels, including those with mobility considerations. Our trainers modify exercises for wheelchair users, prosthetic users, and individuals with neurological conditions. Whether you're post-rehab or an experienced athlete, we meet you where you are.</p>
+            <p>This class is designed for all fitness levels, including those with mobility considerations. Our trainers modify exercises for wheelchair users, prosthetic users, and individuals with neurological conditions. Whether you're post-rehab or an experienced athlete, we meet you where you are.</p>
+          </div>
+
+          <div class="booking-description">
+            <h2>Current Client Discount</h2>
+            <p>Already training with us? Current MATRX clients receive a 10% discount on all Adaptive Group Fitness punch cards. Contact us or mention your existing account at checkout.</p>
           </div>
         </div>
 
@@ -115,62 +118,54 @@
 
             <div class="booking-options">
               <label class="booking-option">
-                <input type="radio" name="frequency" value="1x" data-price="270">
+                <input type="radio" name="pack" value="dropin" data-price="25">
                 <div class="booking-option__content">
-                  <span class="booking-option__title">1x Per Week</span>
-                  <span class="booking-option__subtitle">6 sessions total</span>
-                  <span class="booking-option__price">$270</span>
+                  <span class="booking-option__title">Drop-In</span>
+                  <span class="booking-option__subtitle">Single session, no commitment</span>
+                  <span class="booking-option__price">$25</span>
+                </div>
+              </label>
+
+              <label class="booking-option">
+                <input type="radio" name="pack" value="5" data-price="100" checked>
+                <div class="booking-option__content">
+                  <span class="booking-option__title">5-Class Punch Card</span>
+                  <span class="booking-option__subtitle">$20 per class</span>
+                  <span class="booking-option__price">$100</span>
                 </div>
               </label>
 
               <label class="booking-option booking-option--featured">
-                <input type="radio" name="frequency" value="2x" data-price="540" checked>
+                <input type="radio" name="pack" value="10" data-price="180">
                 <div class="booking-option__content">
                   <span class="booking-option__badge">Most Popular</span>
-                  <span class="booking-option__title">2x Per Week</span>
-                  <span class="booking-option__subtitle">12 sessions total</span>
-                  <span class="booking-option__price">$540</span>
+                  <span class="booking-option__title">10-Class Punch Card</span>
+                  <span class="booking-option__subtitle">$18 per class</span>
+                  <span class="booking-option__price">$180</span>
+                </div>
+              </label>
+
+              <label class="booking-option">
+                <input type="radio" name="pack" value="20" data-price="300">
+                <div class="booking-option__content">
+                  <span class="booking-option__badge">Best Value</span>
+                  <span class="booking-option__title">20-Class Punch Card</span>
+                  <span class="booking-option__subtitle">$15 per class</span>
+                  <span class="booking-option__price">$300</span>
                 </div>
               </label>
             </div>
 
-            <div class="booking-cycle">
-              <h4>Select Start Date</h4>
-              <div class="cycle-options">
-                <label class="cycle-option">
-                  <input type="radio" name="cycle" value="feb" checked>
-                  <div class="cycle-option__content">
-                    <span class="cycle-option__date">Feb 11, 2025</span>
-                    <span class="cycle-option__spots">4 spots left</span>
-                  </div>
-                </label>
-                <label class="cycle-option">
-                  <input type="radio" name="cycle" value="mar">
-                  <div class="cycle-option__content">
-                    <span class="cycle-option__date">Mar 25, 2025</span>
-                    <span class="cycle-option__spots">8 spots left</span>
-                  </div>
-                </label>
-                <label class="cycle-option cycle-option--disabled">
-                  <input type="radio" name="cycle" value="apr" disabled>
-                  <div class="cycle-option__content">
-                    <span class="cycle-option__date">Jan 14, 2025</span>
-                    <span class="cycle-option__spots">Sold Out</span>
-                  </div>
-                </label>
-              </div>
-            </div>
-
             <div class="booking-summary">
               <div class="booking-summary__row">
-                <span>2x Per Week (Feb 11)</span>
-                <span class="booking-summary__price">$540.00</span>
+                <span>5-Class Punch Card</span>
+                <span class="booking-summary__price">$100.00</span>
               </div>
             </div>
 
             <a href="checkout.html" class="btn btn--cta btn--lg booking-cta">Add to Cart</a>
 
-            <p class="booking-note">Secure checkout. Cancel up to 48 hours before first session for full refund.</p>
+            <p class="booking-note">Current clients receive 10% off punch cards. Secure checkout.</p>
           </div>
         </div>
       </div>
@@ -185,7 +180,7 @@
       <div class="container site-footer__grid">
         <div class="footer-col footer-col--brand">
           <img src="images/matrx logo.webp" alt="MATRX Health & Fitness" class="logo__img logo__img--footer">
-          <p class="footer-tagline">Restoring function, empowering life.</p>
+          <p class="footer-tagline">Rediscover Possible.</p>
           <p class="footer-address">16145 Leone Dr<br>Macomb, MI 48042<br><a href="tel:5862323644">(586) 232-3644</a></p>
           <div class="footer-social">
             <a href="https://www.facebook.com/MatrXHealthFitness/" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener">
@@ -200,7 +195,7 @@
           <h4>Services</h4>
           <a href="neurological-rehabilitation.html">Physical Therapy</a>
           <a href="fitness-programs.html">Fitness & Strength</a>
-          <a href="neufit.html">NeuFit Technology</a>
+          <a href="neufit.html">Neubie Technology</a>
           <a href="physician-referrals.html">For Physicians</a>
         </div>
         <div class="footer-col">
@@ -222,7 +217,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <span>&copy; 2025 MATRX Health & Fitness</span>
+        <span>&copy; 2026 MATRX Health & Fitness</span>
         <div class="footer-bottom__links">
           <a href="#">Privacy Policy</a>
           <a href="#">Accessibility</a>

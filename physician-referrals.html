@@ -43,9 +43,7 @@
           <li class="has-dropdown">
             <a href="fitness-programs.html">Fitness & Strength <svg class="chevron" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
             <ul class="dropdown">
-              <li><a href="fitness-programs.html">Programs & Pricing</a></li>
-              <li><a href="personal-training.html">Personal Training</a></li>
-              <li><a href="adaptive-sports.html">Adaptive Sports & Group Classes</a></li>
+              <li><a href="fitness-programs.html">Fitness & Strength</a></li>
             </ul>
           </li>
           <li><a href="physician-referrals.html" class="active">For Physicians</a></li>
@@ -75,14 +73,15 @@
             <li>Timely, detailed progress reports delivered to your office</li>
             <li>Individualized care plans for complex neurological and orthopedic cases</li>
             <li>Specialized expertise in stroke, SCI, and TBI rehabilitation</li>
-            <li>NeuFit neurostimulation technology for accelerated outcomes</li>
+            <li>Advanced neurostimulation techniques including the Neubie for accelerated outcomes</li>
+            <li>Every session is one-on-one with a Doctor of Physical Therapy — no techs, no assistants</li>
           </ul>
         </div>
         <div class="two-col__block">
           <h2>Outcomes You Can Trust</h2>
           <ul class="check-list">
             <li>Evidence-based protocols aligned with current clinical guidelines</li>
-            <li>Dedicated physician liaison for case coordination</li>
+
             <li>Transparent communication throughout the patient journey</li>
           </ul>
         </div>
@@ -95,9 +94,112 @@
     <div class="container">
       <div class="referral-layout">
         <div class="referral-layout__form">
-          <h2>Submit a Referral</h2>
-          <p style="margin-bottom:1.5rem;">For HIPAA compliance, all patient referrals are submitted through our secure EMR system. Click below to access the referral portal.</p>
-          <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=1515&s=DL" target="_blank" rel="noopener" class="btn btn--cta btn--lg">Submit a Referral</a>
+          <h2>Refer a Patient</h2>
+          <p class="form-note">Refer a patient to Matrx in under two minutes. Complete the form below and our team will follow up within one business day. When you refer to Matrx, your patient is evaluated and treated one-on-one by a Doctor of Physical Therapy from their first visit.</p>
+
+          <form id="referralForm" action="mailto:info@matrxpt.com" method="post" enctype="text/plain">
+            <h3 style="font-size:.95rem;margin-bottom:1rem;margin-top:.5rem;">Patient Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-first-name">Patient First Name <span style="color:#c00;">*</span></label>
+                <input type="text" id="patient-first-name" name="Patient First Name" required>
+              </div>
+              <div class="form-group">
+                <label for="patient-last-name">Patient Last Name <span style="color:#c00;">*</span></label>
+                <input type="text" id="patient-last-name" name="Patient Last Name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-dob">Date of Birth <span style="color:#c00;">*</span></label>
+                <input type="date" id="patient-dob" name="Date of Birth" required>
+              </div>
+              <div class="form-group">
+                <label for="injury-date">Date of Injury / Accident</label>
+                <input type="date" id="injury-date" name="Date of Injury">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patient-phone">Patient Phone <span style="color:#c00;">*</span></label>
+                <input type="tel" id="patient-phone" name="Patient Phone" required>
+              </div>
+              <div class="form-group">
+                <label for="patient-email">Patient Email</label>
+                <input type="email" id="patient-email" name="Patient Email">
+              </div>
+            </div>
+
+            <h3 style="font-size:.95rem;margin-bottom:1rem;margin-top:1.5rem;">Referring Provider Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="referring-physician">Referring Physician <span style="color:#c00;">*</span></label>
+                <input type="text" id="referring-physician" name="Referring Physician" required>
+              </div>
+              <div class="form-group">
+                <label for="clinic-location">Clinic / Practice Location</label>
+                <input type="text" id="clinic-location" name="Clinic Location">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="doctor-phone">Doctor Phone or Fax <span style="color:#c00;">*</span></label>
+                <input type="text" id="doctor-phone" name="Doctor Phone or Fax" required>
+              </div>
+              <div class="form-group">
+                <label for="doctor-email">Doctor Email</label>
+                <input type="email" id="doctor-email" name="Doctor Email">
+              </div>
+            </div>
+
+            <h3 style="font-size:.95rem;margin-bottom:1rem;margin-top:1.5rem;">Referral Details</h3>
+            <div class="form-group">
+              <label for="reason-referral">Reason for Referral / Diagnosis <span style="color:#c00;">*</span></label>
+              <textarea id="reason-referral" name="Reason for Referral" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="insurance-carrier">Insurance Carrier</label>
+              <input type="text" id="insurance-carrier" name="Insurance Carrier">
+            </div>
+
+            <h3 style="font-size:.95rem;margin-bottom:1rem;margin-top:1.5rem;">Your Information (Person Submitting)</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="referrer-name">Your Name</label>
+                <input type="text" id="referrer-name" name="Referrer Name">
+              </div>
+              <div class="form-group">
+                <label for="referrer-relationship">Relationship to Patient</label>
+                <input type="text" id="referrer-relationship" name="Relationship to Patient" placeholder="e.g. Physician, Case Manager, Family">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="referrer-phone">Your Phone</label>
+                <input type="tel" id="referrer-phone" name="Referrer Phone">
+              </div>
+              <div class="form-group">
+                <label for="referrer-email">Your Email</label>
+                <input type="email" id="referrer-email" name="Referrer Email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="additional-notes">Additional Notes</label>
+              <textarea id="additional-notes" name="Additional Notes" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--cta btn--lg" style="margin-top:.5rem;">Submit Referral</button>
+          </form>
+
+          <div class="form-confirmation" id="referralConfirmation" style="display:none;">
+            <div style="text-align:center;padding:2rem;">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#86C43F" stroke-width="3"/><path d="M14 24l7 7 13-13" stroke="#86C43F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3 style="margin-top:1rem;">Thank You</h3>
+              <p style="color:var(--slate);">Your referral has been received. Our team will follow up within one business day.</p>
+            </div>
+          </div>
+
           <p style="margin-top:1.5rem;font-size:.875rem;color:var(--slate);">For urgent referrals or questions, call us directly at <a href="tel:5862323644">(586) 232-3644</a>.</p>
         </div>
         <div class="referral-layout__sidebar">
@@ -107,8 +209,15 @@
             <ul class="insurance-list">
               <li>Medicare / Medicaid</li>
               <li>Blue Cross Blue Shield (BCBS)</li>
-              <li>United Healthcare</li>
-              <li>TriCare</li>
+              <li>Blue Care Network</li>
+              <li>Priority Healthcare</li>
+              <li>Aetna</li>
+              <li>Cigna</li>
+              <li>Cofinity</li>
+              <li>FirstHealth</li>
+              <li>Tri-West</li>
+              <li>Molina</li>
+              <li>Humana</li>
               <li>ChampVA</li>
               <li>Workers' Compensation</li>
               <li>Auto Insurance (PIP)</li>
@@ -131,7 +240,7 @@
       <div class="container site-footer__grid">
         <div class="footer-col footer-col--brand">
           <img src="images/matrx logo.webp" alt="MATRX Health & Fitness" class="logo__img logo__img--footer">
-          <p class="footer-tagline">Restoring function, empowering life.</p>
+          <p class="footer-tagline">Rediscover Possible.</p>
           <p class="footer-address">16145 Leone Dr<br>Macomb, MI 48042<br><a href="tel:5862323644">(586) 232-3644</a></p>
           <div class="footer-social">
             <a href="https://www.facebook.com/MatrXHealthFitness/" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener">
@@ -146,7 +255,7 @@
           <h4>Services</h4>
           <a href="neurological-rehabilitation.html">Physical Therapy</a>
           <a href="fitness-programs.html">Fitness & Strength</a>
-          <a href="neufit.html">NeuFit Technology</a>
+          <a href="neufit.html">Neubie Technology</a>
           <a href="physician-referrals.html">For Physicians</a>
         </div>
         <div class="footer-col">
@@ -168,7 +277,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <span>&copy; 2025 MATRX Health & Fitness</span>
+        <span>&copy; 2026 MATRX Health & Fitness</span>
         <div class="footer-bottom__links">
           <a href="#">Privacy Policy</a>
           <a href="#">Accessibility</a>

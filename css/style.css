@@ -686,9 +686,9 @@ select{width:100%;padding:.65rem .75rem;border:1px solid var(--border);border-ra
   flex-shrink:0;
   width:200px;
   height:80px;
-  background:var(--light-gray);
-  border:1px solid var(--border);
-  border-radius:8px;
+  background:transparent;
+  border:none;
+  border-radius:0;
   display:flex;
   align-items:center;
   justify-content:center;

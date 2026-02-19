@@ -6,7 +6,7 @@
   <title>MATRX Health & Fitness | Rediscover Possible</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -54,169 +54,217 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- 1. HERO -->
   <main id="main">
-  <section class="hero">
-    <div class="hero__overlay"></div>
+  <section class="hero" role="banner">
+    <div class="hero__overlay" style="background-image:url('images/matrx hero.webp');" aria-hidden="true"></div>
+    <div class="hero__video" aria-hidden="true">
+      <video autoplay muted loop playsinline poster="images/matrx hero.webp">
+        <source src="images/Matrx Hero Video.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="container hero__content">
+      <div class="hero__badge">
+        100% Doctor of Physical Therapy-Led Care
+      </div>
       <h1 class="hero__title"><em>Rediscover Possible.</em></h1>
-      <p class="hero__sub">Specialized Physical Therapy & Adaptive Fitness in Macomb, MI.<br>Every patient is evaluated and treated one-on-one by a Doctor of Physical Therapy — every visit.</p>
+      <p class="hero__sub">Neurological rehabilitation, orthopedic recovery, and adaptive fitness — all led one-on-one by Doctors of Physical Therapy. Not techs. Not assistants. Your therapist, every visit.</p>
       <div class="hero__ctas">
-        <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=1515&s=DL" target="_blank" rel="noopener" class="btn btn--primary">I Need Physical Therapy</a>
-        <a href="tel:5862323644" class="btn btn--secondary">I Want Fitness Training</a>
+        <a href="new-patients.html" class="btn btn--primary">Start Your Recovery</a>
+        <a href="fitness-programs.html" class="btn btn--outline-light">Explore Fitness Programs</a>
       </div>
     </div>
   </section>
 
-  <!-- CHOOSE YOUR PATH -->
+  <!-- 2. THIS IS WHAT RECOVERY LOOKS LIKE (moved up from bottom) -->
+  <section class="section section--light" aria-label="Community in action photo gallery">
+    <div class="container">
+      <h2 class="section-heading section-heading--rule reveal"><em>This Is What Recovery Looks Like</em></h2>
+      <p class="section-subheading text-center reveal">Our patients don't just regain function — they kayak, cycle, shoot arrows, and push limits they were told were permanent.</p>
+      <div class="community-mosaic reveal-stagger">
+        <figure class="community-mosaic__item community-mosaic__item--wide reveal">
+          <img src="images/IMG-6951.JPG" alt="Adaptive archery — wheelchair users taking aim at the range">
+          <figcaption class="mosaic-caption" aria-hidden="true">Adaptive archery at the range</figcaption>
+        </figure>
+        <figure class="community-mosaic__item reveal">
+          <img src="images/IMG_1282.JPG" alt="Community member kayaking on the lake">
+          <figcaption class="mosaic-caption" aria-hidden="true">Kayaking on the lake</figcaption>
+        </figure>
+        <figure class="community-mosaic__item reveal">
+          <img src="images/IMG_1338.JPG" alt="Adaptive cyclist riding a recumbent trike along a scenic path">
+          <figcaption class="mosaic-caption" aria-hidden="true">Recumbent trike riding</figcaption>
+        </figure>
+        <figure class="community-mosaic__item reveal">
+          <img src="images/IMG_9236.jpg" alt="Wheelchair and kayak at the dock ready for adaptive paddling">
+          <figcaption class="mosaic-caption" aria-hidden="true">Ready to launch</figcaption>
+        </figure>
+        <figure class="community-mosaic__item reveal">
+          <img src="images/IMG_1720.jpg" alt="Adaptive hand cyclists riding through countryside trails">
+          <figcaption class="mosaic-caption" aria-hidden="true">Hand cycling through the countryside</figcaption>
+        </figure>
+        <figure class="community-mosaic__item reveal">
+          <img src="images/Track chair.jpg" alt="Two people in all-terrain track chairs outdoors">
+          <figcaption class="mosaic-caption" aria-hidden="true">All-terrain track chairs outdoors</figcaption>
+        </figure>
+        <figure class="community-mosaic__item reveal">
+          <img src="images/IMG_2503.jpg" alt="Adaptive standing frame used during rehabilitation">
+          <figcaption class="mosaic-caption" aria-hidden="true">Standing strong</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. GETTING STARTED IS EASY -->
+  <section class="experience section section--muted-green">
+    <div class="container">
+      <h2 class="section-heading section-heading--rule reveal"><em>Getting Started Is Easy</em></h2>
+      <div class="experience__grid reveal-stagger">
+        <div class="experience__item reveal">
+          <div class="experience__icon">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="8" y="4" width="40" height="48" rx="4" stroke="#1A1A1A" stroke-width="2"/><path d="M20 24l5 5 11-11" stroke="#417E14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="16" y="12" width="24" height="2" rx="1" fill="#1A1A1A"/></svg>
+          </div>
+          <h3>Book in 60 Seconds</h3>
+          <p class="experience__desc">Schedule online anytime. Same-week appointments available.</p>
+        </div>
+        <div class="experience__item reveal">
+          <div class="experience__icon">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="12" y="8" width="32" height="40" rx="3" stroke="#1A1A1A" stroke-width="2"/><line x1="20" y1="20" x2="36" y2="20" stroke="#1A1A1A" stroke-width="2"/><line x1="20" y1="26" x2="36" y2="26" stroke="#1A1A1A" stroke-width="2"/><line x1="20" y1="32" x2="30" y2="32" stroke="#1A1A1A" stroke-width="2"/><circle cx="40" cy="40" r="8" fill="#417E14"/><path d="M37 40h6M40 37v6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Skip the Clipboard</h3>
+          <p class="experience__desc">Complete all paperwork digitally before your first visit.</p>
+        </div>
+        <div class="experience__item reveal">
+          <div class="experience__icon">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="20" r="8" stroke="#1A1A1A" stroke-width="2"/><path d="M16 44c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#1A1A1A" stroke-width="2"/><circle cx="28" cy="28" r="24" stroke="#417E14" stroke-width="2" stroke-dasharray="4 3"/></svg>
+          </div>
+          <h3>Fully Accessible Facility</h3>
+          <p class="experience__desc">ADA-compliant space with adaptive equipment built in, not added on.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top:2rem;">
+        <a href="new-patients.html" class="btn btn--primary">New Patient Information</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HOW CAN WE HELP YOU (enhanced service cards) -->
   <section class="paths section">
     <div class="container">
-      <h2 class="section-heading section-heading--rule"><em>Choose Your Path</em></h2>
-      <div class="paths__grid">
-        <div class="path-card">
-          <h3 class="path-card__title">Physical Therapy & Recovery</h3>
-          <div class="path-card__img" style="background-image:url('images/p7-scaled.jpg');" role="img" aria-label="Therapist applying Neubie neurostimulation to patient's knee"></div>
-          <p class="path-card__desc">Rehabilitation for Stroke, SCI & Pain</p>
-          <a href="neurological-rehabilitation.html" class="btn btn--outline-dark">Learn More ›</a>
+      <h2 class="section-heading section-heading--rule reveal"><em>How Can We Help You?</em></h2>
+      <div class="paths__grid reveal-stagger">
+        <div class="path-card reveal">
+          <div class="path-card__img" style="background-image:url('images/NeuFit03.11.20-149-scaled.jpg');" role="img" aria-label="Therapist working with patient during neurological rehabilitation"></div>
+          <h3 class="path-card__title">Neurological & Orthopedic Rehab</h3>
+          <p class="path-card__desc">Stroke, SCI, TBI, MS, Parkinson's, post-surgical recovery, and chronic pain. Every session is one-on-one with a Doctor of Physical Therapy.</p>
+          <a href="neurological-rehabilitation.html" class="btn btn--outline-dark">Explore Rehabilitation</a>
         </div>
-        <div class="path-card">
-          <h3 class="path-card__title">Fitness & Adaptive Sports</h3>
-          <div class="path-card__img" style="background-image:url('images/IMG_1282.JPG');" role="img" aria-label="Community member kayaking at adaptive sports event"></div>
-          <p class="path-card__desc">Training for Every Ability Level</p>
-          <a href="fitness-programs.html" class="btn btn--outline-dark">View Programs ›</a>
+        <div class="path-card reveal">
+          <div class="path-card__img" style="background-image:url('images/IMG_3047.jpeg');" role="img" aria-label="MATRX gym with adaptive fitness equipment"></div>
+          <h3 class="path-card__title">Adaptive Fitness & Group Classes</h3>
+          <p class="path-card__desc">Group training, private sessions, and drop-in classes designed for all abilities. Build strength, confidence, and community.</p>
+          <a href="fitness-programs.html" class="btn btn--outline-dark">See Fitness Programs</a>
         </div>
-        <div class="path-card">
-          <h3 class="path-card__title">The Neubie Advantage</h3>
+        <div class="path-card reveal">
           <div class="path-card__img" style="background-image:url('images/NeuFit09_17_20-206-scaled.jpg');" role="img" aria-label="Client training with the Neubie neurostimulation device"></div>
-          <p class="path-card__desc">Advanced Neuromuscular Technology</p>
-          <a href="neufit.html" class="btn btn--outline-dark">Discover Neubie ›</a>
+          <h3 class="path-card__title">Neubie Neurostimulation</h3>
+          <p class="path-card__desc">Advanced direct current stimulation that works with your nervous system to accelerate healing, reduce pain, and restore function faster.</p>
+          <a href="neufit.html" class="btn btn--outline-dark">Learn About Neubie</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PHYSICIAN REFERRAL STRIP -->
-  <section class="referral-strip">
-    <div class="container referral-strip__inner">
-      <div class="referral-strip__text">
-        <h2 class="referral-strip__title">Partnering with Physicians for Better Outcomes</h2>
-        <p class="referral-strip__copy">When you refer to Matrx, your patient is evaluated and treated one-on-one by a Doctor of Physical Therapy from day one.</p>
-      </div>
-      <div class="referral-strip__actions">
-        <a href="physician-referrals.html" class="btn btn--primary btn--lg">Refer a Patient ›</a>
+  <!-- 4. CREDIBILITY STATS BAR -->
+  <section class="stats-band" aria-label="Key facts about MATRX">
+    <div class="container">
+      <div class="stats-band__grid" role="list" aria-label="Practice highlights">
+        <div class="stats-band__item" role="listitem">
+          <span class="stats-band__value">100%</span>
+          <span class="stats-band__label">DPT-Led Sessions</span>
+        </div>
+        <div class="stats-band__item" role="listitem">
+          <span class="stats-band__value">1 : 1</span>
+          <span class="stats-band__label">Every Visit, Every Patient</span>
+        </div>
+        <div class="stats-band__item" role="listitem">
+          <span class="stats-band__value">Since 2017</span>
+          <span class="stats-band__label">Serving Macomb, MI</span>
+        </div>
+        <div class="stats-band__item" role="listitem">
+          <span class="stats-band__value">14+</span>
+          <span class="stats-band__label">Insurances Accepted</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- COMMUNITY / TEAM -->
+  <!-- 5. MORE THAN A CLINIC -->
   <section class="community section">
     <div class="container community__inner">
-      <div class="community__img" style="background-image:url('images/IMG_0749.jpg');" role="img" aria-label="MATRX community members connecting at an adaptive sports event"></div>
-      <div class="community__text">
-        <h2><em>More Than a Clinic. We Are a Community.</em></h2>
-        <p>Meet our dedicated team of experts committed to your health and recovery.</p>
-        <a href="about-us.html#team" class="btn btn--dark">Meet Our Team ›</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO TESTIMONIALS — Placeholder for Friday shoot content -->
-  <section class="section" id="testimonials">
-    <div class="container">
-      <h2 class="section-heading section-heading--rule"><em>Hear From Our Patients</em></h2>
-      <p style="max-width:600px;margin:0 auto 2rem;" class="text-center">Real stories from real people who have experienced the MATRX difference.</p>
-      <div class="paths__grid">
-        <div class="video-placeholder">
-          <img src="https://placehold.co/400x240/121212/86C43F?text=%E2%96%B6+Patient+Story+1" alt="Patient testimonial video placeholder" style="width:100%;border-radius:8px;">
-          <p style="margin-top:.75rem;font-size:.9rem;color:var(--slate);text-align:center;">Coming Soon</p>
-        </div>
-        <div class="video-placeholder">
-          <img src="https://placehold.co/400x240/121212/86C43F?text=%E2%96%B6+Patient+Story+2" alt="Patient testimonial video placeholder" style="width:100%;border-radius:8px;">
-          <p style="margin-top:.75rem;font-size:.9rem;color:var(--slate);text-align:center;">Coming Soon</p>
-        </div>
-        <div class="video-placeholder">
-          <img src="https://placehold.co/400x240/121212/86C43F?text=%E2%96%B6+Patient+Story+3" alt="Patient testimonial video placeholder" style="width:100%;border-radius:8px;">
-          <p style="margin-top:.75rem;font-size:.9rem;color:var(--slate);text-align:center;">Coming Soon</p>
+      <div class="community__img reveal" style="background-image:url('images/IMG_1300.JPG');" role="img" aria-label="MATRX team and community members at an adaptive sports event"></div>
+      <div class="community__text reveal">
+        <h2><em>More Than a Clinic. A Community Built Around You.</em></h2>
+        <p>Founded in 2017 by Dr. Krystina Miller, MATRX was built on a simple belief: recovery shouldn't end when your prescription runs out. Our team of Doctors of Physical Therapy combines clinical expertise with adaptive sports, community events, and long-term wellness programs — so your progress never has an expiration date.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="about-us.html" class="btn btn--dark">Our Story</a>
+          <a href="about-us.html#team" class="btn btn--ghost">Meet the Team</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COMMUNITY IN ACTION -->
-  <section class="section section--light">
-    <div class="container">
-      <h2 class="section-heading section-heading--rule"><em>Our Community in Action</em></h2>
-      <div class="community-mosaic">
-        <div class="community-mosaic__item community-mosaic__item--wide">
-          <img src="images/IMG-6951.JPG" alt="Adaptive archery — wheelchair users taking aim at the range">
-        </div>
-        <div class="community-mosaic__item">
-          <img src="images/IMG_1282.JPG" alt="Community member kayaking on the lake">
-        </div>
-        <div class="community-mosaic__item">
-          <img src="images/IMG_1338.JPG" alt="Adaptive cyclist riding a recumbent trike along a scenic path">
-        </div>
-        <div class="community-mosaic__item">
-          <img src="images/IMG_2503.jpg" alt="Client using standing power wheelchair in the MATRX gym">
-        </div>
-        <div class="community-mosaic__item community-mosaic__item--wide">
-          <img src="images/IMG_1720.jpg" alt="Adaptive hand cyclists riding through countryside trails">
-        </div>
-        <div class="community-mosaic__item">
-          <img src="images/Track chair.jpg" alt="Two people in all-terrain track chairs outdoors">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PARTNER LOGO ROTATOR -->
+  <!-- 7. PARTNER LOGO ROTATOR -->
   <section class="logo-rotator section">
     <div class="container">
-      <h2 class="section-heading section-heading--rule"><em>Our Partners</em></h2>
+      <h2 class="section-heading section-heading--rule reveal"><em>Our Partners</em></h2>
       <div class="logo-rotator__track-wrap">
         <div class="logo-rotator__track">
           <div class="logo-rotator__item"><img src="images/logo-neufit.png" alt="NeuFit"></div>
           <div class="logo-rotator__item"><img src="images/logo-ata.png" alt="Adaptive Training Academy"></div>
           <div class="logo-rotator__item"><img src="images/logo-dnem.png" alt="Disability Network of Eastern Michigan"></div>
           <div class="logo-rotator__item"><img src="images/logo-cas.png" alt="Creative Ability Solutions"></div>
-          <div class="logo-rotator__item"><img src="https://placehold.co/160x60/F7F7F8/646262?text=Quality+Home+Medical" alt="Quality Home Medical"></div>
+          <div class="logo-rotator__item"><img src="images/logo-qhm.png" alt="Quality Home Medical"></div>
+          <div class="logo-rotator__item"><img src="images/logo-pwrmoves.png" alt="PWR!Moves Certified Therapist"></div>
+          <div class="logo-rotator__item"><img src="images/logo-risingphoenix.png" alt="Rising Phoenix"></div>
+          <div class="logo-rotator__item"><img src="images/logo-usa.png" alt="United Spinal Association"></div>
+          <div class="logo-rotator__item"><img src="images/logo-rehasense.jpg" alt="Rehasense"></div>
           <!-- Duplicate set for seamless loop -->
           <div class="logo-rotator__item"><img src="images/logo-neufit.png" alt="NeuFit"></div>
           <div class="logo-rotator__item"><img src="images/logo-ata.png" alt="Adaptive Training Academy"></div>
           <div class="logo-rotator__item"><img src="images/logo-dnem.png" alt="Disability Network of Eastern Michigan"></div>
           <div class="logo-rotator__item"><img src="images/logo-cas.png" alt="Creative Ability Solutions"></div>
-          <div class="logo-rotator__item"><img src="https://placehold.co/160x60/F7F7F8/646262?text=Quality+Home+Medical" alt="Quality Home Medical"></div>
+          <div class="logo-rotator__item"><img src="images/logo-qhm.png" alt="Quality Home Medical"></div>
+          <div class="logo-rotator__item"><img src="images/logo-pwrmoves.png" alt="PWR!Moves Certified Therapist"></div>
+          <div class="logo-rotator__item"><img src="images/logo-risingphoenix.png" alt="Rising Phoenix"></div>
+          <div class="logo-rotator__item"><img src="images/logo-usa.png" alt="United Spinal Association"></div>
+          <div class="logo-rotator__item"><img src="images/logo-rehasense.jpg" alt="Rehasense"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STREAMLINED EXPERIENCE -->
-  <section class="experience section section--light">
+  <!-- 8. PHYSICIAN REFERRAL -->
+  <section class="section section--light" style="padding:3rem 0;">
     <div class="container">
-      <h2 class="section-heading section-heading--rule"><em>Streamlined Patient Experience</em></h2>
-      <div class="experience__grid">
-        <div class="experience__item">
-          <div class="experience__icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="8" y="4" width="40" height="48" rx="4" stroke="#1A1A1A" stroke-width="2"/><path d="M20 24l5 5 11-11" stroke="#417E14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="16" y="12" width="24" height="2" rx="1" fill="#1A1A1A"/></svg>
-          </div>
-          <h3>Easy Scheduling</h3>
-        </div>
-        <div class="experience__item">
-          <div class="experience__icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="12" y="8" width="32" height="40" rx="3" stroke="#1A1A1A" stroke-width="2"/><line x1="20" y1="20" x2="36" y2="20" stroke="#1A1A1A" stroke-width="2"/><line x1="20" y1="26" x2="36" y2="26" stroke="#1A1A1A" stroke-width="2"/><line x1="20" y1="32" x2="30" y2="32" stroke="#1A1A1A" stroke-width="2"/><circle cx="40" cy="40" r="8" fill="#417E14"/><path d="M37 40h6M40 37v6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Digital Forms</h3>
-        </div>
-        <div class="experience__item">
-          <div class="experience__icon">
-            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="20" r="8" stroke="#1A1A1A" stroke-width="2"/><path d="M16 44c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#1A1A1A" stroke-width="2"/><circle cx="28" cy="28" r="24" stroke="#417E14" stroke-width="2" stroke-dasharray="4 3"/></svg>
-          </div>
-          <h3>Accessible Facility</h3>
+      <div class="referral-card">
+        <div class="referral-card__accent" aria-hidden="true"></div>
+        <div class="referral-card__body">
+          <h3 class="referral-card__title">For Referring Physicians</h3>
+          <p class="referral-card__copy">MATRX accepts most major insurances and offers same-week availability. Every patient is evaluated and treated by a Doctor of Physical Therapy from day one.</p>
+          <a href="physician-referrals.html" class="btn btn--primary">Refer a Patient</a>
         </div>
       </div>
-      <div class="text-center" style="margin-top:2rem;">
-        <a href="new-patients.html" class="btn btn--primary">Prepare for Your Visit ›</a>
+    </div>
+  </section>
+
+  <!-- 9. FINAL CTA -->
+  <section class="cta-band">
+    <div class="container text-center">
+      <h2>Ready to Rediscover Possible?</h2>
+      <p>Whether you're recovering from injury or building strength for life, we're here to help.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://scheduling.go.promptemr.com/onlineScheduling?w=1515&s=DL" target="_blank" rel="noopener" class="btn btn--cta btn--lg">Request an Appointment</a>
+        <a href="tel:5862323644" class="btn btn--outline-dark btn--lg">Call (586) 232-3644</a>
       </div>
     </div>
   </section>

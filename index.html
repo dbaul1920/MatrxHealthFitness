@@ -35,7 +35,7 @@
           <li class="has-dropdown">
             <a href="neurological-rehabilitation.html">Physical Therapy <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></a>
             <ul class="dropdown">
-              <li><a href="neurological-rehabilitation.html">Neurological Rehabilitation</a></li>
+              <li><a href="neurological-rehabilitation.html">Neuro-Rehabilitation</a></li>
               <li><a href="orthopedics.html">Orthopedics & Pain Management</a></li>
               <li><a href="wheelchair-seating.html">Wheelchair Seating & Positioning</a></li>
             </ul>
@@ -68,7 +68,7 @@
         100% Doctor of Physical Therapy-Led Care
       </div>
       <h1 class="hero__title"><em>Rediscover Possible.</em></h1>
-      <p class="hero__sub">Neurological rehabilitation, orthopedic recovery, and adaptive fitness — all led one-on-one by Doctors of Physical Therapy. Not techs. Not assistants. Your therapist, every visit.</p>
+      <p class="hero__sub">Neuro-rehabilitation, orthopedic recovery, and adaptive fitness — all led one-on-one by Doctors of Physical Therapy. Not techs. Not assistants. Your therapist, every visit.</p>
       <div class="hero__ctas">
         <a href="new-patients.html" class="btn btn--primary">Start Your Recovery</a>
         <a href="fitness-programs.html" class="btn btn--outline-light">Explore Fitness Programs</a>
@@ -213,6 +213,77 @@
     </div>
   </section>
 
+  <!-- 6b. SUCCESS STORIES -->
+  <section class="section section--light" id="success-stories" aria-label="Patient success stories">
+    <div class="container text-center">
+      <h2 class="section-heading section-heading--rule reveal"><em>Success Stories</em></h2>
+      <p class="section-subheading text-center reveal">Real patients. Real progress. Hear their stories in their own words.</p>
+      <div class="stories-grid reveal-stagger">
+
+        <!-- Story Card 1 -->
+        <div class="story-card reveal">
+          <button class="story-card__poster" aria-label="Play video: Patient recovery story"
+                  data-video-src="https://www.youtube.com/embed/VIDEO_ID_1?autoplay=1&rel=0"
+                  style="background-image:url('images/story-thumb-1.jpg');">
+            <span class="story-card__play" aria-hidden="true">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="32" fill="rgba(18,18,18,.65)"/><polygon points="26,20 26,44 46,32" fill="#FFFFFF"/></svg>
+            </span>
+          </button>
+          <div class="story-card__info">
+            <h3 class="story-card__name">Patient Name</h3>
+            <p class="story-card__caption">Brief description of their recovery journey.</p>
+          </div>
+        </div>
+
+        <!-- Story Card 2 -->
+        <div class="story-card reveal">
+          <button class="story-card__poster" aria-label="Play video: Patient recovery story"
+                  data-video-src="https://www.youtube.com/embed/VIDEO_ID_2?autoplay=1&rel=0"
+                  style="background-image:url('images/story-thumb-2.jpg');">
+            <span class="story-card__play" aria-hidden="true">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="32" fill="rgba(18,18,18,.65)"/><polygon points="26,20 26,44 46,32" fill="#FFFFFF"/></svg>
+            </span>
+          </button>
+          <div class="story-card__info">
+            <h3 class="story-card__name">Patient Name</h3>
+            <p class="story-card__caption">Brief description of their recovery journey.</p>
+          </div>
+        </div>
+
+        <!-- Story Card 3 -->
+        <div class="story-card reveal">
+          <button class="story-card__poster" aria-label="Play video: Patient recovery story"
+                  data-video-src="https://www.youtube.com/embed/VIDEO_ID_3?autoplay=1&rel=0"
+                  style="background-image:url('images/story-thumb-3.jpg');">
+            <span class="story-card__play" aria-hidden="true">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="32" fill="rgba(18,18,18,.65)"/><polygon points="26,20 26,44 46,32" fill="#FFFFFF"/></svg>
+            </span>
+          </button>
+          <div class="story-card__info">
+            <h3 class="story-card__name">Patient Name</h3>
+            <p class="story-card__caption">Brief description of their recovery journey.</p>
+          </div>
+        </div>
+
+        <!-- Story Card 4 -->
+        <div class="story-card reveal">
+          <button class="story-card__poster" aria-label="Play video: Patient recovery story"
+                  data-video-src="https://www.youtube.com/embed/VIDEO_ID_4?autoplay=1&rel=0"
+                  style="background-image:url('images/story-thumb-4.jpg');">
+            <span class="story-card__play" aria-hidden="true">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="32" fill="rgba(18,18,18,.65)"/><polygon points="26,20 26,44 46,32" fill="#FFFFFF"/></svg>
+            </span>
+          </button>
+          <div class="story-card__info">
+            <h3 class="story-card__name">Patient Name</h3>
+            <p class="story-card__caption">Brief description of their recovery journey.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- 7. PARTNER LOGO ROTATOR -->
   <section class="logo-rotator section">
     <div class="container">
@@ -323,6 +394,13 @@
       </div>
     </div>
   </footer>
+
+  <!-- Video Lightbox Modal -->
+  <div class="story-modal" id="storyModal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="story-modal__inner">
+      <button class="story-modal__close" id="storyModalClose" aria-label="Close video">&times;</button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

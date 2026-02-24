@@ -66,4 +66,63 @@ document.addEventListener('DOMContentLoaded', () => {
       reveals.forEach(el => revealObserver.observe(el));
     }
   }
+
+  // Success Stories — Modal lightbox for video testimonials
+  const modal = document.getElementById('storyModal');
+  const closeBtn = document.getElementById('storyModalClose');
+  if (modal && closeBtn) {
+    const modalInner = modal.querySelector('.story-modal__inner');
+    let previousFocus = null;
+
+    function openStoryModal(src) {
+      previousFocus = document.activeElement;
+      const old = modalInner.querySelector('iframe');
+      if (old) old.remove();
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.allow = 'autoplay; encrypted-media';
+      iframe.allowFullscreen = true;
+      iframe.title = 'Patient video testimonial';
+      modalInner.appendChild(iframe);
+      modal.classList.add('is-active');
+      document.body.classList.add('modal-open');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeStoryModal() {
+      modal.classList.remove('is-active');
+      document.body.classList.remove('modal-open');
+      document.body.style.overflow = '';
+      const iframe = modalInner.querySelector('iframe');
+      if (iframe) iframe.remove();
+      if (previousFocus) previousFocus.focus();
+    }
+
+    document.querySelectorAll('.story-card__poster').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-video-src');
+        if (src) openStoryModal(src);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeStoryModal);
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeStoryModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-active')) {
+        closeStoryModal();
+      }
+    });
+
+    modal.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        closeBtn.focus();
+      }
+    });
+  }
 });

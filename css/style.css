@@ -85,7 +85,7 @@ p{max-width:68ch}
 }
 .site-header__inner{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;gap:2rem}
 .logo{display:flex;align-items:center;text-decoration:none}
-.logo__img{height:40px;width:auto;object-fit:contain}
+.logo__img{height:48px;width:auto;object-fit:contain}
 .logo__img--footer{height:30px;width:auto;max-width:150px;object-fit:contain;opacity:.85}
 
 /* NAV */
@@ -460,7 +460,7 @@ p{max-width:68ch}
   .page-hero{padding:3.5rem 0 2.5rem}
   .referral-strip__actions{flex-direction:column;align-items:flex-start}
   .referral-strip__stats{flex-direction:column;gap:1.25rem;align-items:center}
-  .logo__img{height:34px}
+  .logo__img{height:40px}
   .footer-bottom .container{flex-direction:column;text-align:center}
   .top-bar__inner{justify-content:center}
 }
@@ -501,12 +501,12 @@ button:focus-visible{outline:3px solid var(--matrx-green-dark);outline-offset:2p
    ============================================================ */
 .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;margin-top:1.5rem}
 .gallery-item{aspect-ratio:4/3;border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--slate);font-size:.8rem;overflow:hidden}
-.gallery-item img{width:100%;height:100%;object-fit:cover}
+.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:top}
 .gallery-grid--lg{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
 
 /* --- ABOUT PAGE COMPONENTS --- */
 .two-col__img-fill{border-radius:12px;overflow:hidden;min-height:400px}
-.two-col__img-fill img{width:100%;height:100%;object-fit:cover}
+.two-col__img-fill img{width:100%;height:100%;object-fit:cover;object-position:top}
 
 .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
 .values-card{
@@ -834,10 +834,12 @@ select{width:100%;padding:.65rem .75rem;border:1px solid var(--border);border-ra
   max-width:160px;
   max-height:60px;
   object-fit:contain;
-  opacity:.85;
-  transition:all .3s;
+  filter:grayscale(100%);
+  opacity:.6;
+  transition:all .3s ease-in-out;
 }
 .logo-rotator__item:hover img{
+  filter:grayscale(0%);
   opacity:1;
 }
 @keyframes logo-scroll{
@@ -931,6 +933,160 @@ select{width:100%;padding:.65rem .75rem;border:1px solid var(--border);border-ra
 }
 
 /* ============================================================
+   SUCCESS STORIES — Video Poster Grid + Lightbox Modal
+   ============================================================ */
+.stories-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:2rem;
+  margin-top:1.5rem;
+}
+.story-card{
+  background:var(--white);
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.story-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+.story-card__poster{
+  position:relative;
+  display:block;
+  width:100%;
+  aspect-ratio:16/9;
+  background:var(--charcoal) center/cover no-repeat;
+  border:none;
+  padding:0;
+  cursor:pointer;
+  overflow:hidden;
+}
+.story-card__poster::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(18,18,18,.2);
+  transition:background .3s ease;
+}
+.story-card:hover .story-card__poster::after{
+  background:rgba(18,18,18,.35);
+}
+.story-card__play{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1;
+  transition:transform .3s ease;
+}
+.story-card:hover .story-card__play{
+  transform:scale(1.1);
+}
+.story-card__info{
+  padding:1rem 1.25rem 1.25rem;
+}
+.story-card__name{
+  font-size:1rem;
+  font-family:'Inter','Open Sans',sans-serif;
+  font-weight:700;
+  color:var(--charcoal);
+  margin-bottom:.25rem;
+}
+.story-card__caption{
+  font-size:.875rem;
+  color:var(--slate);
+  line-height:1.6;
+}
+.story-card__iframe{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  background:var(--charcoal);
+}
+.story-card__iframe iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* --- Lightbox Modal --- */
+.story-modal{
+  position:fixed;
+  inset:0;
+  z-index:9990;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.85);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .3s ease,visibility .3s ease;
+}
+.story-modal.is-active{
+  opacity:1;
+  visibility:visible;
+}
+.story-modal__inner{
+  position:relative;
+  width:90vw;
+  max-width:960px;
+  aspect-ratio:16/9;
+  background:#000;
+  border-radius:8px;
+  overflow:hidden;
+  transform:scale(.95);
+  transition:transform .3s ease;
+}
+.story-modal.is-active .story-modal__inner{
+  transform:scale(1);
+}
+.story-modal__inner iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:none;
+}
+.story-modal__close{
+  position:absolute;
+  top:-40px;
+  right:0;
+  background:none;
+  border:none;
+  color:var(--white);
+  font-size:1.5rem;
+  cursor:pointer;
+  padding:.25rem .5rem;
+  line-height:1;
+  opacity:.7;
+  transition:opacity .2s;
+}
+.story-modal__close:hover{
+  opacity:1;
+}
+.story-modal__close:focus-visible{
+  outline:3px solid var(--matrx-green);
+  outline-offset:2px;
+}
+body.modal-open .site-header{
+  position:relative;
+  z-index:0;
+}
+body.modal-open .top-bar{
+  position:relative;
+  z-index:0;
+}
+
+@media(max-width:768px){
+  .stories-grid{grid-template-columns:1fr}
+}
+
+/* ============================================================
    FORM CONFIRMATION (Referral form success state)
    ============================================================ */
 .form-confirmation{
@@ -975,6 +1131,7 @@ select{width:100%;padding:.65rem .75rem;border:1px solid var(--border);border-ra
   width:100%;
   height:100%;
   object-fit:cover;
+  object-position:top;
   transition:transform .4s ease;
 }
 .community-mosaic__item:hover img{
